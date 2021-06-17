@@ -185,7 +185,7 @@ Bytes: [f0, 9f, 99, 82]
 </code></pre><p>How do those 4 bytes map to the Unicode character 🙂, code point <a href="https://unicode.org/emoji/charts/full-emoji-list.html#1f642">U+1F642</a>?</p>
 <p>Let&rsquo;s look at those same bytes, represented in binary:</p>
 <pre><code>11110000 10011111 10011001 10000010
-</code></pre><p>In UTF-8, the first byte tells you how many bytes make up the character.  If the byte starts with <code>0</code>, it&rsquo;s a 1-byte character.  If it starts with a <code>1</code>, it is multiple bytes, and the next three bits tell you just how many bytes.  <a href="https://en.wikipedia.org/wiki/UTF-8#Encoding">The wikipedia article probably explains it better than I can,</a> but here&rsquo;s a simple table:</p>
+</code></pre><p>In UTF-8, the first bit tells you how many bytes make up the character.  If the first bit is <code>0</code>, it&rsquo;s a 1-byte character.  If it's <code>1</code>, it is multiple bytes, and the next three bits tell you just how many bytes.  <a href="https://en.wikipedia.org/wiki/UTF-8#Encoding">The wikipedia article probably explains it better than I can,</a> but here&rsquo;s a simple table:</p>
 <table>
 <thead>
 <tr>
